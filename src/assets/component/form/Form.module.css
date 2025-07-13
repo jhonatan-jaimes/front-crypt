@@ -1,0 +1,30 @@
+.contain {
+  width: 40%;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.inputText {
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 20px;
+  width: calc(100% - 20px);
+  border: 1px solid gray;
+}
+
+.botonSubmit {
+  width: calc(100% - 6px);
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 6px;
+  border: 1px solid gray;
+  font-size: 20px;
+  background-color: inherit;
+}
+
+.botonSubmit:hover {
+  background-color: #09f;
+  color: white;
+  border-color: #09f;
+}
