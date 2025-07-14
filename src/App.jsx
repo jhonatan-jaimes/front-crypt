@@ -3,9 +3,9 @@ import FormComponent from "./assets/component/form/FormComponent";
 
 function App() {
   return (
-    <>
+    <section className="containApp">
       <FormComponent />
-    </>
+    </section>
   );
 }
 

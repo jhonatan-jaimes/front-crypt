@@ -1,24 +1,87 @@
+.general {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
 .contain {
   width: 40%;
+  min-width: 240px;
   padding: 10px;
-  border: 1px solid gray;
+  box-shadow: 1px 1px 3px rgb(0, 0, 0);
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.divBotones {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.botonSe {
+  width: calc(50% - 5px);
+  padding-top: 5px;
+  padding-bottom: 5px;
   border-radius: 5px;
+  border: 1px solid rgb(111, 111, 111);
+  font-size: 20px;
+  background-color: inherit;
+}
+
+.botonSe:hover {
+  background-color: #09f;
+  color: white;
+  border-color: #09f;
+  cursor: pointer;
 }
 
 .inputText {
-  padding: 6px;
-  border-radius: 6px;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
   font-size: 20px;
-  width: calc(100% - 20px);
-  border: 1px solid gray;
+  width: calc(100% - 14px);
+  border: none;
+  border-bottom: 1px solid rgb(111, 111, 111);
+}
+
+.imgDiv {
+  min-width: 240px;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 1px 1px 3px rgb(0, 0, 0);
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.botonQr {
+  display: block;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(111, 111, 111);
+  font-size: 20px;
+  background-color: inherit;
+}
+
+.botonQr:hover {
+  background-color: #09f;
+  color: white;
+  border-color: #09f;
+  cursor: pointer;
 }
 
 .botonSubmit {
-  width: calc(100% - 6px);
-  padding-top: 6px;
-  padding-bottom: 6px;
-  border-radius: 6px;
-  border: 1px solid gray;
+  margin-top: 10px;
+  width: calc(100%);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(111, 111, 111);
   font-size: 20px;
   background-color: inherit;
 }
@@ -27,4 +90,22 @@
   background-color: #09f;
   color: white;
   border-color: #09f;
+  cursor: pointer;
+}
+
+.textArea {
+  width: calc(100% - 14px);
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  border-top: 1px solid rgb(111, 111, 111);
+  height: 20vh;
+  font-size: 15px;
+}
+
+.imgQr {
+  width: 240px;
+  height: 240px;
+  border-radius: 5px;
 }
