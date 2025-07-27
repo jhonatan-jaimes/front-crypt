@@ -9,7 +9,8 @@
   width: 40%;
   min-width: 240px;
   padding: 10px;
-  box-shadow: 1px 1px 3px rgb(0, 0, 0);
+  border: 2px solid black;
+  box-shadow: 4px 4px 0px rgb(0, 0, 0);
   background-color: #fff;
   border-radius: 10px;
 }
@@ -26,7 +27,7 @@
   padding-top: 5px;
   padding-bottom: 5px;
   border-radius: 5px;
-  border: 1px solid rgb(111, 111, 111);
+  border: 2px solid black;
   font-size: 20px;
   background-color: inherit;
 }
@@ -45,14 +46,15 @@
   font-size: 20px;
   width: calc(100% - 14px);
   border: none;
-  border-bottom: 1px solid rgb(111, 111, 111);
+  border-bottom: 2px solid black;
 }
 
 .imgDiv {
   min-width: 240px;
   border-radius: 10px;
   padding: 10px;
-  box-shadow: 1px 1px 3px rgb(0, 0, 0);
+  border: 2px solid black;
+  box-shadow: 4px 4px 0px rgb(0, 0, 0);
   background-color: #ffffff;
   text-align: center;
 }
@@ -63,7 +65,7 @@
   padding-top: 5px;
   padding-bottom: 5px;
   border-radius: 5px;
-  border: 1px solid rgb(111, 111, 111);
+  border: 2px solid black;
   font-size: 20px;
   background-color: inherit;
 }
@@ -81,7 +83,7 @@
   padding-top: 5px;
   padding-bottom: 5px;
   border-radius: 5px;
-  border: 1px solid rgb(111, 111, 111);
+  border: 2px solid black;
   font-size: 20px;
   background-color: inherit;
 }
@@ -99,7 +101,8 @@
   padding: 5px;
   border-radius: 5px;
   border: none;
-  border-top: 1px solid rgb(111, 111, 111);
+  border-top: 2px solid black;
+  border-left: 2px solid black;
   height: 20vh;
   font-size: 15px;
 }
