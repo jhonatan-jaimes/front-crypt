@@ -1,10 +1,15 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import FormComponent from "./assets/component/form/FormComponent";
+import CryptoPage from "./assets/pages/CryptoPage";
+import NavComponent from "./assets/component/nav/NavComponent";
 
 function App() {
   return (
     <section className="containApp">
-      <FormComponent />
+      <NavComponent />
+      <Routes>
+        <Route path="/crypto" element={<CryptoPage />} />
+      </Routes>
     </section>
   );
 }
