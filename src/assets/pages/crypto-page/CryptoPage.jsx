@@ -1,7 +1,7 @@
 import React from "react";
-import FormComponent from "../component/form/FormComponent";
+import FormComponent from "../../component/form/FormComponent.jsx";
 import styles from "./Crypto.module.css";
-import { fetchPost } from "../domain/Fetch.js";
+import { fetchPost } from "../../domain/Fetch.js";
 
 const CryptoPage = () => {
   const handleSubmit = (mode, objeto) => {

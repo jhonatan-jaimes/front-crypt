@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import CryptoPage from "./assets/pages/CryptoPage";
+import CryptoPage from "./assets/pages/crypto-page/CryptoPage";
 import NavComponent from "./assets/component/nav/NavComponent";
 
 function App() {
