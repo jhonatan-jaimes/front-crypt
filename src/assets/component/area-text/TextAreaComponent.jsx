@@ -1,9 +1,9 @@
 import React from "react";
 
-const TextAreaComponent = ({ text, className, placeholder }) => {
+const TextAreaComponent = ({ value, className, placeholder }) => {
   return (
     <textarea
-      value={text}
+      value={value}
       className={className}
       readOnly
       placeholder={placeholder}

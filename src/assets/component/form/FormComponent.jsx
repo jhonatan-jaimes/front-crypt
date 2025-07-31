@@ -2,24 +2,29 @@ import BotonComponent from "../boton/BotonComponent";
 import InputTextComponent from "../input-text/InputTextComponent";
 import TextAreaComponent from "../area-text/TextAreaComponent";
 import styles from "./Form.module.css";
-
 import { useState } from "react";
 
-const FormComponent = ({ handleSubmit }) => {
+const FormComponent = ({ handleSubmit, code }) => {
   const [mode, setMode] = useState("Encode");
-  const [text, setText] = useState({});
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setText({ [name]: value });
+  const [inputValue, setInputValue] = useState(""); // Estado único para el input
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value); // Actualiza directamente el estado
   };
+
   const clickSubmit = () => {
-    handleSubmit(mode.toLowerCase(), text);
-    console.log(text);
+    handleSubmit(mode.toLowerCase(), { text: inputValue }); // Envía como objeto si es necesario
   };
+
   const handleMode = (modo) => {
     return mode === modo ? styles.botonSelect : styles.botonSe;
   };
-  console.log(text);
+
+  const changeMode = (newMode) => {
+    setMode(newMode);
+    setInputValue(""); // Resetea el input al cambiar modo
+  };
+
   return (
     <section className={styles.general}>
       <div className={styles.contain}>
@@ -27,27 +32,33 @@ const FormComponent = ({ handleSubmit }) => {
           <BotonComponent
             nameButton={"Encode"}
             className={handleMode("Encode")}
-            onClick={() => setMode("Encode")}
+            onClick={() => changeMode("Encode")}
           />
           <BotonComponent
             nameButton={"Decode"}
             className={handleMode("Decode")}
-            onClick={() => setMode("Decode")}
+            onClick={() => changeMode("Decode")}
           />
         </div>
+
         <InputTextComponent
+          value={inputValue}
           placeholder={`Ingrese el texto a ${mode.toLowerCase()}`}
           className={styles.inputText}
-          onChange={handleChange}
+          onChange={handleInputChange} // Usa el manejador corregido
         />
+
         <BotonComponent
           nameButton={mode}
           className={styles.botonSubmit}
-          onClick={() => clickSubmit()}
+          onClick={clickSubmit}
         />
+
         <TextAreaComponent
+          value={code.text}
           className={styles.textArea}
-          placeholder={`Aqui ira el codigo ${mode.toLowerCase()}`}
+          placeholder={`Aquí irá el código ${mode.toLowerCase()}`}
+          readOnly // Asumo que es solo para visualización
         />
       </div>
     </section>
