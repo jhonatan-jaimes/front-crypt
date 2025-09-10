@@ -5,22 +5,36 @@ import BotonComponent from "../boton/BotonComponent";
 import FormQrComponent from "../form-qr/FormQrComponent";
 import InputTextComponent from "../input-text/InputTextComponent";
 
-const QrComponent = ({ imgQr, value, placeholder, className, onChange }) => {
+const QrComponent = ({
+  imgQr,
+  value,
+  placeholder,
+  className,
+  onChange,
+  nameButtonCre,
+  nameButtonDes,
+}) => {
   return (
-    <section>
-      <div className={styles.imgDiv}>
+    <section className={styles.imgDiv}>
+      <div>
         <InputTextComponent
           value={value}
           placeholder={placeholder}
           className={className}
           onChange={onChange}
         />
-        <BotonComponent
-          nameButton={"Descargar QR"}
-          className={styles.botonQr}
+        <InputTextComponent
+          value={value}
+          placeholder={placeholder}
+          className={className}
+          onChange={onChange}
         />
       </div>
       <ImgComponent imgQr={imgQr} />
+      <div className={styles.boxBoton}>
+        <BotonComponent nameButton={nameButtonCre} className={styles.botonQr} />
+        <BotonComponent nameButton={nameButtonDes} className={styles.botonQr} />
+      </div>
     </section>
   );
 };

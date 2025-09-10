@@ -70,9 +70,14 @@
   text-align: center;
 }
 
-.botonQr {
-  display: block;
+.boxBoton {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.botonQr {
+  width: calc(50% - 5px);
   padding-top: 5px;
   padding-bottom: 5px;
   border-radius: 5px;

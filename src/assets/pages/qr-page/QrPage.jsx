@@ -4,7 +4,7 @@ import QrComponent from "../../component/qr-component/QrComponent";
 const QrPage = () => {
   return (
     <div>
-      <QrComponent />
+      <QrComponent nameButtonCre={"Crear QR"} nameButtonDes={"Descargar QR"} />
     </div>
   );
 };
