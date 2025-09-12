@@ -13,6 +13,8 @@ const QrComponent = ({
   onChange,
   nameButtonCre,
   nameButtonDes,
+  onClickE,
+  onClickD,
 }) => {
   return (
     <section className={styles.imgDiv}>
@@ -30,10 +32,18 @@ const QrComponent = ({
           onChange={onChange}
         />
       </div>
-      <ImgComponent imgQr={imgQr} />
+      {imgQr && <ImgComponent imgQr={imgQr.qr} alt={value} />}
       <div className={styles.boxBoton}>
-        <BotonComponent nameButton={nameButtonCre} className={styles.botonQr} />
-        <BotonComponent nameButton={nameButtonDes} className={styles.botonQr} />
+        <BotonComponent
+          nameButton={nameButtonCre}
+          className={styles.botonQr}
+          onClick={() => onClickE("get-qr", { text: value, size: 250 })}
+        />
+        <BotonComponent
+          nameButton={nameButtonDes}
+          className={styles.botonQr}
+          onClick={onClickD}
+        />
       </div>
     </section>
   );

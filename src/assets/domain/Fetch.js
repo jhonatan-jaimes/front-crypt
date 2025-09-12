@@ -12,6 +12,7 @@ export const fetchGet = async (url) => {
 };
 
 export const fetchPost = async (url, objeto) => {
+  console.log(url);
   try {
     const res = await fetch(url, {
       method: "POST",
