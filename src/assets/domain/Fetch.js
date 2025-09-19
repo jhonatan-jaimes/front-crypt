@@ -28,6 +28,6 @@ export const fetchPost = async (url, objeto) => {
 
     return await res.json();
   } catch (error) {
-    console.error("Error en la petición fetch:", error);
+    console.error("Error en la petición fetch: mmm", error);
   }
 };
