@@ -11,7 +11,7 @@ const CryptoPage = () => {
       const result = await fetchPost(`${UrlLinks.URL_GENERAL}/${mode}`, objeto);
       setCode(result);
     } catch (error) {
-      console.error("Error in handleSubmit:", error);
+      console.error("Error in handleSubmit: 555", error);
     }
   };
   return (
