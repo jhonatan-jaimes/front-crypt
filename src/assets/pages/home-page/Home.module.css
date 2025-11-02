@@ -1,0 +1,17 @@
+.pageGeneral {
+    background-color: #eeeeee;
+    width: 85%;
+    height: 100vh;
+    align-content: center;
+}
+
+.divParrafo {
+    width: 40%;
+    min-width: 240px;
+    padding: 10px;
+    border: 2px solid black;
+    box-shadow: 4px 4px 0px rgb(0, 0, 0);
+    background-color: #fff;
+    border-radius: 10px;
+    margin: auto;
+}
