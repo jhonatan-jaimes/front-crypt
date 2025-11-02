@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import QrComponent from "../../component/qr-component/QrComponent";
 import { fetchPost } from "../../domain/Fetch.js";
 import UrlLinks from "../../domain/UrlLinks.js";
+import styles from "../qr-page/QrPage.module.css";
 
 const QrPage = () => {
   const [imgQr, setImgQr] = useState("");
   const [messa, setMessa] = useState("");
-
-  console.log(messa);
 
   const onClickE = async (mode, objeto) => {
     try {
@@ -23,8 +22,9 @@ const QrPage = () => {
   };
 
   return (
-    <div>
+    <div className={styles.pageGeneral}>
       <QrComponent
+        placeholder={"Ingresa el texto para crear el QR"}
         imgQr={imgQr ? imgQr : ""}
         nameButtonCre={"Crear QR"}
         nameButtonDes={"Descargar QR"}

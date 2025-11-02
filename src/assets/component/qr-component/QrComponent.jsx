@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../form/Form.module.css";
+import styles from "../qr-component/Qr.module.css";
 import ImgComponent from "../img-qr/ImgComponent";
 import BotonComponent from "../boton/BotonComponent";
 import FormQrComponent from "../form-qr/FormQrComponent";
@@ -9,7 +9,6 @@ const QrComponent = ({
   imgQr,
   value,
   placeholder,
-  className,
   onChange,
   nameButtonCre,
   nameButtonDes,
@@ -22,13 +21,7 @@ const QrComponent = ({
         <InputTextComponent
           value={value}
           placeholder={placeholder}
-          className={className}
-          onChange={onChange}
-        />
-        <InputTextComponent
-          value={value}
-          placeholder={placeholder}
-          className={className}
+          className={styles.inputText}
           onChange={onChange}
         />
       </div>
@@ -37,7 +30,7 @@ const QrComponent = ({
         <BotonComponent
           nameButton={nameButtonCre}
           className={styles.botonQr}
-          onClick={() => onClickE("get-qr", { text: value, size: 250 })}
+          onClick={() => onClickE("get-qr", { text: value, size: 400 })}
         />
         <BotonComponent
           nameButton={nameButtonDes}

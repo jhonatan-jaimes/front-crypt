@@ -1,5 +1,6 @@
 .navContain {
-  width: 20vw;
+  width: 15vw;
+  min-width: 200px;
   min-height: 100vh;
   background-color: #09f;
 }
@@ -17,4 +18,8 @@
 .linkNav:hover {
   background-color: #eee;
   color: #000;
+}
+
+.tituloNav {
+  padding: 20px;
 }
