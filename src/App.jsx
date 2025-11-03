@@ -6,6 +6,7 @@ import QrPage from "./assets/pages/qr-page/QrPage";
 import HomePage from "./assets/pages/home-page/HomePage";
 import { useEffect, useState } from "react";
 import ShortPage from "./assets/pages/short-page/ShortPage";
+import LoadPage from "./assets/pages/load-page/LoadPage";
 
 function App() {
   const [tipo, setTipo] = useState("");
@@ -19,6 +20,7 @@ function App() {
     <section className="containApp">
       <NavComponent tipo={tipo} />
       <Routes>
+        <Route path="/:id" element={<LoadPage />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/ed" element={<CryptoPage />} />
         <Route path="/qr" element={<QrPage />} />
