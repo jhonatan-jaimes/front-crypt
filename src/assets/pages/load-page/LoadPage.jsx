@@ -1,21 +1,18 @@
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { fetchGet } from '../../domain/Fetch';
 import UrlLinks from '../../domain/UrlLinks';
 
 const LoadPage = () => {
-    const { id } = useParams();
+    const { text } = useParams();
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                await fetchGet(`${UrlLinks.URL_PARAMS}/${id}`);
-            } catch (error) {
-                console.error("Error in handleSubmit: 555", error);
-            }
-        };
+        const timer = setTimeout(() => {
+            // 👇 Redirige al backend después de 3 segundos
+            window.location.href = `${UrlLinks.URL_GENERAL}/${text}`;
+        }, 3000); // 3000 ms = 3 segundos
 
-        fetchData(); // 👈 aquí la ejecutas
-    }, [id]); // 👈 importante: incluye las dependencias
+        // Limpieza si el usuario se va antes del tiempo
+        return () => clearTimeout(timer); // 👈 aquí la ejecutas
+    }, [text]); // 👈 importante: incluye las dependencias
 
     return (
         <div>

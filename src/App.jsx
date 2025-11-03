@@ -20,7 +20,7 @@ function App() {
     <section className="containApp">
       <NavComponent tipo={tipo} />
       <Routes>
-        <Route path="/:id" element={<LoadPage />} />
+        <Route path="/:text" element={<LoadPage />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/ed" element={<CryptoPage />} />
         <Route path="/qr" element={<QrPage />} />
