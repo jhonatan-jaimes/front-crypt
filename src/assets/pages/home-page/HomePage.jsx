@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import TextHome from "../../component/text-home/TextHome"
 import styles from "./Home.module.css"
+import UrlLinks from '../../domain/UrlLinks';
 
 const HomePage = () => {
+    useEffect(() => {
+        const wakeUp = async () => {
+            await fetch(`${UrlLinks.URL_GENERAL}/${"wake-up"}`);
+        }
+        wakeUp();
+    }, []);
     const texto = `
     Bienvenido a EDSQ, una plataforma creada para simplificar tus procesos digitales y ofrecerte herramientas inteligentes que optimicen tu día a día. En EDSQ reunimos en un solo lugar las funciones más útiles para trabajar con información digital: codificar y decodificar texto, acortar enlaces, y generar códigos QR personalizados de forma rápida, segura y gratuita. \n
 
