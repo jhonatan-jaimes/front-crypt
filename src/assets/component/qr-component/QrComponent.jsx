@@ -35,7 +35,7 @@ const QrComponent = ({
         <BotonComponent
           nameButton={nameButtonDes}
           className={styles.botonQr}
-          onClick={onClickD}
+          onClick={() => onClickD(imgQr.qr, imgQr.qr.substring(24, 30))}
         />
       </div>
     </section>

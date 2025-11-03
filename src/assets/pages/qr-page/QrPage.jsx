@@ -16,6 +16,12 @@ const QrPage = () => {
       console.error("Error in handleSubmit:", error);
     }
   };
+  const onClickD = (dataImage, nameImage) => {
+    const a = document.createElement("a");
+    a.href = dataImage;               // tu data:image/png;base64,...
+    a.download = `${nameImage}.png`;      // nombre del archivo
+    a.click();
+  };
 
   const onChange = (e) => {
     setMessa(e.target.value);
@@ -29,6 +35,7 @@ const QrPage = () => {
         nameButtonCre={"Crear QR"}
         nameButtonDes={"Descargar QR"}
         onClickE={onClickE}
+        onClickD={onClickD}
         onChange={onChange}
         value={messa}
       />

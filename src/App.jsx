@@ -16,7 +16,7 @@ function App() {
     const last = segments.length ? segments[segments.length - 1] : "";
     setTipo(last);
   }, []);
-  const hideNav = /^\/[^/]+$/.test(location.pathname) && location.pathname !== "/";
+  const hideNav = /^\/[a-zA-Z0-9]{8}$/.test(location.pathname);
   return (
     <section className="containApp">
       {!hideNav && <NavComponent tipo={tipo} />}
