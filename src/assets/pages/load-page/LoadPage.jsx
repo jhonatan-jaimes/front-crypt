@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import UrlLinks from '../../domain/UrlLinks';
+import styles from "./Load.module.css"
 
 const LoadPage = () => {
     const { text } = useParams();
@@ -15,8 +16,9 @@ const LoadPage = () => {
     }, [text]); // 👈 importante: incluye las dependencias
 
     return (
-        <div>
-
+        <div className={styles.pageDiv}>
+            <img className={styles.pageImg} src="image/load.gif" alt="Load" />
+            <h1 className={styles.pageParra}>Redirigiendo...</h1>
         </div>
     )
 }

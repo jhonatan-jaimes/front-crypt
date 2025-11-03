@@ -1,0 +1,19 @@
+.pageDiv {
+    width: 100vw;
+    height: 100vh;
+    background-color: #09f;
+    color: white;
+    align-content: center;
+    text-align: center;
+}
+
+.pageImg {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+}
+
+.pageParra {
+    margin: auto;
+    color: white;
+}
