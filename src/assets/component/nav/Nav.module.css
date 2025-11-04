@@ -1,42 +1,44 @@
 .navContain {
-  width: 15vw;
-  min-width: 200px;
-  min-height: 100vh;
+  height: 8vh;
+  width: 75%;
   background-color: #09f;
+  display: flex;
+  margin: auto;
+  border: 2px solid black;
+  box-shadow: 4px 4px 0px black;
+  border-radius: 10px;
+}
+
+.navLinkCont {
+  display: flex;
+  margin: auto;
 }
 
 .linkNav {
   color: #eee;
-  padding-left: 20px;
   cursor: pointer;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 20px;
   text-decoration: none;
-  display: block;
 }
 
 .linkNavSelect {
-  background-color: #eee;
   color: #000;
-  padding-left: 20px;
   cursor: pointer;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  background-color: rgb(255, 255, 255, 25%);
+  border-radius: 5px;
+  padding: 20px;
   text-decoration: none;
-  display: block;
 }
 
 .linkNavSelect:hover {
-  background-color: #eee;
-  color: #09f;
+  color: #555;
 }
 
 .linkNav:hover {
-  background-color: #eee;
-  color: #000;
+  color: #555;
 }
 
 .tituloNav {
   padding: 20px;
-  text-align: center;
+  align-items: center;
 }

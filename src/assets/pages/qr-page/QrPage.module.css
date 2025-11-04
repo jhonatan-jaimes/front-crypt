@@ -1,6 +1,7 @@
 .pageGeneral {
-    background-color: #eeeeee;
-    width: 85%;
-    height: 100vh;
+    background-color: #eee;
+    margin-top: 10px;
+    width: 60%;
+    height: calc(90vh - 14px);
     align-content: center;
 }

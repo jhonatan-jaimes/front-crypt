@@ -1,12 +1,13 @@
 .pageGeneral {
     background-color: #eeeeee;
-    width: 85%;
-    height: 100vh;
+    margin-top: 10px;
+    width: 60%;
+    height: calc(90vh - 14px);
     align-content: center;
 }
 
 .divParrafo {
-    width: 40%;
+    width: 50%;
     min-width: 240px;
     padding: 10px;
     border: 2px solid black;

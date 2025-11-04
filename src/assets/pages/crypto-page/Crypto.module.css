@@ -1,6 +1,7 @@
 .cryptoContain {
-  width: 85%;
-  height: 100vh;
+  margin-top: 10px;
+  width: 60%;
+  height: calc(90vh - 14px);
   align-content: center;
   background-color: #eee;
 }

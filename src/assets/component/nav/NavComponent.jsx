@@ -20,31 +20,35 @@ const NavComponent = ({ tipo }) => {
   };
   return (
     <section className={styles.navContain}>
-      <h1 className={styles.tituloNav}>EDSQ</h1>
-      <LinkComponent
-        to="/"
-        name="Home"
-        className={handleMode("home")}
-        onClick={() => changeMode("home")}
-      />
-      <LinkComponent
-        to="/qr"
-        name="Codigo QR"
-        className={handleMode("qr")}
-        onClick={() => changeMode("qr")}
-      />
-      <LinkComponent
-        to="/ed"
-        name="Encriptar texto"
-        className={handleMode("ed")}
-        onClick={() => changeMode("ed")}
-      />
-      <LinkComponent
-        to="/shorter"
-        name="Acortar link"
-        className={handleMode("shorter")}
-        onClick={() => changeMode("shorter")}
-      />
+      <div>
+        <h1 className={styles.tituloNav}>EDSQ</h1>
+      </div>
+      <div className={styles.navLinkCont}>
+        <LinkComponent
+          to="/"
+          name="Home"
+          className={handleMode("home")}
+          onClick={() => changeMode("home")}
+        />
+        <LinkComponent
+          to="/qr"
+          name="Codigo QR"
+          className={handleMode("qr")}
+          onClick={() => changeMode("qr")}
+        />
+        <LinkComponent
+          to="/ed"
+          name="Encriptar texto"
+          className={handleMode("ed")}
+          onClick={() => changeMode("ed")}
+        />
+        <LinkComponent
+          to="/shorter"
+          name="Acortar link"
+          className={handleMode("shorter")}
+          onClick={() => changeMode("shorter")}
+        />
+      </div>
     </section>
   );
 };
