@@ -1,7 +1,6 @@
 .divGeneral {
     margin-top: 10px;
     width: 60%;
-    height: calc(90vh - 14px);
-    background-color: #eee;
+    height: 90vh;
     align-content: center;
 }

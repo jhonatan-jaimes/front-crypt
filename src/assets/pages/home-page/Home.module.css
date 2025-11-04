@@ -1,8 +1,7 @@
 .pageGeneral {
-    background-color: #eeeeee;
     margin-top: 10px;
     width: 60%;
-    height: calc(90vh - 14px);
+    height: 90vh;
     align-content: center;
 }
 
