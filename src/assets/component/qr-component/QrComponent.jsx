@@ -25,7 +25,7 @@ const QrComponent = ({
           onChange={onChange}
         />
       </div>
-      {imgQr && <ImgComponent imgQr={imgQr.qr} alt={value} />}
+      {imgQr.qr && <ImgComponent imgQr={imgQr?.qr} alt={value} />}
       <div className={styles.boxBoton}>
         <BotonComponent
           nameButton={nameButtonCre}

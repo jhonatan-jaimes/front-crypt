@@ -20,12 +20,7 @@ export const fetchPost = async (url, objeto) => {
       },
       body: JSON.stringify(objeto),
     });
-
-    if (!res.ok) {
-      throw new Error(`HTTP error! status: ${res.status}`);
-    }
-
-    return await res.json();
+    return res;
   } catch (error) {
     console.error("Error en la petición fetch: mmm", error);
   }

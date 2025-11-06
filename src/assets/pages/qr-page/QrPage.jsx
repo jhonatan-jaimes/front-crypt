@@ -5,13 +5,14 @@ import UrlLinks from "../../domain/UrlLinks.js";
 import styles from "../qr-page/QrPage.module.css";
 
 const QrPage = () => {
-  const [imgQr, setImgQr] = useState("");
+  const [imgQr, setImgQr] = useState({ qr: "" });
   const [messa, setMessa] = useState("");
 
   const onClickE = async (mode, objeto) => {
     try {
       const result = await fetchPost(`${UrlLinks.URL_GENERAL}/${mode}`, objeto);
-      setImgQr(result);
+      const data = await result.json();
+      setImgQr({ qr: data?.qr });
     } catch (error) {
       console.error("Error in handleSubmit:", error);
     }
@@ -31,7 +32,7 @@ const QrPage = () => {
     <div className={styles.pageGeneral}>
       <QrComponent
         placeholder={"Ingresa el texto para crear el QR"}
-        imgQr={imgQr ? imgQr : ""}
+        imgQr={imgQr ? imgQr : { qr: "" }}
         nameButtonCre={"Crear QR"}
         nameButtonDes={"Descargar QR"}
         onClickE={onClickE}

@@ -4,7 +4,7 @@ import TextAreaComponent from "../area-text/TextAreaComponent";
 import styles from "./Form.module.css";
 import { useState } from "react";
 
-const FormComponent = ({ handleSubmit, code }) => {
+const FormComponent = ({ handleSubmit, message }) => {
   const [mode, setMode] = useState("Encode");
   const [inputValue, setInputValue] = useState(""); // Estado único para el input
 
@@ -51,11 +51,11 @@ const FormComponent = ({ handleSubmit, code }) => {
         <BotonComponent
           nameButton={mode}
           className={styles.botonSubmit}
-          onClick={clickSubmit}
+          onClick={() => clickSubmit()}
         />
 
         <TextAreaComponent
-          value={code.text}
+          value={message.text}
           className={styles.textArea}
           placeholder={`Aquí irá el código ${mode.toLowerCase()}`}
           readOnly // Asumo que es solo para visualización

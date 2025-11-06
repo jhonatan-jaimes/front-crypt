@@ -6,14 +6,15 @@ import UrlLinks from "../../domain/UrlLinks.js";
 
 const ShortPage = () => {
     const [messa, setMessa] = useState("");
-    const [link, setLink] = useState("");
+    const [link, setLink] = useState({ text: "" });
     const onChange = (e) => {
         setMessa(e.target.value);
     };
     const onClick = async (mode, objeto) => {
         try {
             const result = await fetchPost(`${UrlLinks.URL_GENERAL}/${mode}`, objeto);
-            setLink(result);
+            const data = await result.json();
+            setLink({ text: data?.text });
         } catch (error) {
             console.error("Error in handleSubmit:", error);
         }
