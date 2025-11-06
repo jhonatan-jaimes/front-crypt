@@ -12,7 +12,11 @@ const QrPage = () => {
     try {
       const result = await fetchPost(`${UrlLinks.URL_GENERAL}/${mode}`, objeto);
       const data = await result.json();
-      setImgQr({ qr: data?.qr });
+      if (!result.ok) {
+        setImgQr({ qr: data?.error });
+      } else {
+        setImgQr({ qr: data?.qr });
+      }
     } catch (error) {
       console.error("Error in handleSubmit:", error);
     }

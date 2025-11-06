@@ -25,7 +25,7 @@ const QrComponent = ({
           onChange={onChange}
         />
       </div>
-      {imgQr.qr && <ImgComponent imgQr={imgQr?.qr} alt={value} />}
+      {imgQr.qr.startsWith("data:") ? imgQr.qr && <ImgComponent imgQr={imgQr?.qr} alt={value} /> : imgQr.qr && <p>{imgQr.qr}</p>}
       <div className={styles.boxBoton}>
         <BotonComponent
           nameButton={nameButtonCre}
