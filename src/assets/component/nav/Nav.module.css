@@ -1,9 +1,9 @@
 .navContain {
   height: 8vh;
   width: 75%;
-  background-color: #09f;
+  background-color: #09e;
   display: flex;
-  margin: auto;
+  justify-content: space-between;
   border: 2px solid black;
   box-shadow: 4px 4px 0px black;
   border-radius: 10px;
@@ -11,31 +11,31 @@
 
 .navLinkCont {
   display: flex;
-  margin: auto;
 }
 
 .linkNav {
-  color: #eee;
+  margin: auto;
+  color: #000;
   cursor: pointer;
-  padding: 20px;
+  padding: 25px;
   text-decoration: none;
 }
 
 .linkNavSelect {
-  color: #000;
+  margin: auto;
+  color: #eee;
   cursor: pointer;
-  background-color: rgb(255, 255, 255, 25%);
   border-radius: 5px;
-  padding: 20px;
+  padding: 25px;
   text-decoration: none;
 }
 
 .linkNavSelect:hover {
-  color: #555;
+  color: #777;
 }
 
 .linkNav:hover {
-  color: #555;
+  color: #777;
 }
 
 .tituloNav {
