@@ -19,9 +19,11 @@ function App() {
   const hideNav = /^\/[a-zA-Z0-9]{8}$/.test(location.pathname);
   return (
     <section className="containApp">
-      <div className="conNav">
-        {!hideNav && <NavComponent tipo={tipo} />}
-      </div>
+      {!hideNav && (
+        <div className="conNav">
+          <NavComponent tipo={tipo}/>
+        </div>
+      )}
       <Routes>
         <Route path="/:text" element={<LoadPage />} />
         <Route path="/" element={<HomePage />} />

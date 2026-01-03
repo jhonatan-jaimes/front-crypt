@@ -1,6 +1,6 @@
 .pageDiv {
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh);
     background-color: #09f;
     color: white;
     align-content: center;
