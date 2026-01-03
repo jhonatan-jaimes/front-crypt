@@ -10,7 +10,7 @@ const QrPage = () => {
 
   const onClickE = async (mode, objeto) => {
     try {
-      const result = await fetchPost(`${UrlLinks.URL_GENERAL}/${mode}`, objeto);
+      const result = await fetchPost(`${UrlLinks.LOCAL_URL}/${mode}`, objeto);
       const data = await result.json();
       if (!result.ok) {
         setImgQr({ qr: data?.error });
@@ -36,7 +36,7 @@ const QrPage = () => {
     <div className={styles.pageGeneral}>
       <QrComponent
         placeholder={"Ingresa el texto para crear el QR"}
-        imgQr={imgQr ? imgQr : { qr: "" }}
+        imgQr={imgQr ? imgQr : { qr: "image/load.gif" }}
         nameButtonCre={"Crear QR"}
         nameButtonDes={"Descargar QR"}
         onClickE={onClickE}
