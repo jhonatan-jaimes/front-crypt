@@ -15,13 +15,14 @@
 .navLinkCont {
   display: flex;
   min-width: 500px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .linkNav {
   margin: auto;
   color: #000;
   cursor: pointer;
-  padding: 20px;
   text-decoration: none;
 }
 
@@ -30,7 +31,6 @@
   color: #eee;
   cursor: pointer;
   border-radius: 5px;
-  padding: 20px;
   text-decoration: none;
 }
 

@@ -10,7 +10,7 @@ const QrPage = () => {
 
   const onClickE = async (mode, objeto) => {
     try {
-      const result = await fetchPost(`${UrlLinks.LOCAL_URL}/${mode}`, objeto);
+      const result = await fetchPost(`${UrlLinks.URL_GENERAL}/${mode}`, objeto);
       const data = await result.json();
       if (!result.ok) {
         setImgQr({ qr: data?.error });
