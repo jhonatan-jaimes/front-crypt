@@ -30,7 +30,7 @@ const QrComponent = ({
         <BotonComponent
           nameButton={nameButtonCre}
           className={styles.botonQr}
-          onClick={() => onClickE("get-qr", { text: value, size: 400 })}
+          onClick={() => onClickE("get-qr", { text: value, size: 500 })}
         />
         <BotonComponent
           nameButton={nameButtonDes}

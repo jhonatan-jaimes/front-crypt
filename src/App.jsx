@@ -9,6 +9,7 @@ import ShortPage from "./assets/pages/short-page/ShortPage";
 import LoadPage from "./assets/pages/load-page/LoadPage";
 
 function App() {
+  //require('dotenv').config();
   const [tipo, setTipo] = useState("");
   useEffect(() => {
     const pathVari = window.location.pathname;
