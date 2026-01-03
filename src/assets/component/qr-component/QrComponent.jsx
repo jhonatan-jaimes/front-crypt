@@ -25,7 +25,8 @@ const QrComponent = ({
           onChange={onChange}
         />
       </div>
-      {imgQr.qr.startsWith("data:") ? imgQr.qr && <ImgComponent imgQr={imgQr?.qr} alt={value} /> : <ImgComponent imgQr={"image/white_image.png"} alt={"white"} />}
+      {imgQr.qr.startsWith("data:") ? 
+        imgQr.qr && <ImgComponent imgQr={imgQr?.qr} alt={value} /> : <canvas className={styles.white}/> }
       <div className={styles.boxBoton}>
         <BotonComponent
           nameButton={nameButtonCre}
