@@ -1,9 +1,11 @@
 .navContain {
-  height: 8vh;
-  width: 75%;
+  max-width: 75%;
+  min-width: 500px;
+  padding: 10px;
   margin: auto;
   background-color: #09e;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   border: 2px solid black;
   box-shadow: 4px 4px 0px black;
@@ -12,13 +14,14 @@
 
 .navLinkCont {
   display: flex;
+  min-width: 500px;
 }
 
 .linkNav {
   margin: auto;
   color: #000;
   cursor: pointer;
-  padding: 25px;
+  padding: 20px;
   text-decoration: none;
 }
 
@@ -27,7 +30,7 @@
   color: #eee;
   cursor: pointer;
   border-radius: 5px;
-  padding: 25px;
+  padding: 20px;
   text-decoration: none;
 }
 
@@ -40,6 +43,5 @@
 }
 
 .tituloNav {
-  padding: 20px;
-  align-items: center;
+  padding: 10px;
 }
