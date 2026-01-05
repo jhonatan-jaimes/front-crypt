@@ -1,8 +1,8 @@
 
 class UrlLinks {
-  static URL_GENERAL = "https://edsq-432349276537.us-south1.run.app/api";
-  static LOCAL_URL = "http://localhost:8080/api";
-  static URL_PARAMS = "https://edsq-804944138861.us-south1.run.app"
+  static URL_GENERAL = import.meta.env.VITE_URL_GENERAL;
+  static LOCAL_URL = import.meta.env.VITE_LOCAL_URL;
+  static URL_PARAMS = import.meta.env.VITE_URL_PARAMS;
 }
 
 export default UrlLinks;
