@@ -32,4 +32,4 @@ const ShortPage = () => {
     )
 }
 
-export default ShortPage
+export default ShortPage;

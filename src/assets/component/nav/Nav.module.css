@@ -1,5 +1,5 @@
 .navContain {
-  max-width: 75%;
+  max-width: 50%;
   min-width: 500px;
   padding: 10px;
   margin: auto;
@@ -15,11 +15,10 @@
 .navLinkCont {
   display: flex;
   min-width: 500px;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
 .linkNav {
+  padding: 10px;
   margin: auto;
   color: #000;
   cursor: pointer;
@@ -28,6 +27,7 @@
 
 .linkNavSelect {
   margin: auto;
+  padding: 10px;
   color: #eee;
   cursor: pointer;
   border-radius: 5px;
@@ -43,5 +43,5 @@
 }
 
 .tituloNav {
-  padding: 10px;
+  padding-left: 10px;
 }

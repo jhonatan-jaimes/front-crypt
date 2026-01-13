@@ -1,12 +1,13 @@
 import { Route, Routes } from "react-router-dom";
+import { useEffect, useState } from "react";
 import "./App.css";
 import CryptoPage from "./assets/pages/crypto-page/CryptoPage";
 import NavComponent from "./assets/component/nav/NavComponent";
 import QrPage from "./assets/pages/qr-page/QrPage";
 import HomePage from "./assets/pages/home-page/HomePage";
-import { useEffect, useState } from "react";
 import ShortPage from "./assets/pages/short-page/ShortPage";
 import LoadPage from "./assets/pages/load-page/LoadPage";
+import HashPage from "./assets/pages/hash/HashPage";
 
 function App() {
   //require('dotenv').config();
@@ -31,6 +32,7 @@ function App() {
         <Route path="/ed" element={<CryptoPage />} />
         <Route path="/qr" element={<QrPage />} />
         <Route path="/shorter" element={<ShortPage />} />
+        <Route path="/hash" element={<HashPage />} />
       </Routes>
     </section>
   );

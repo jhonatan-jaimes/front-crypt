@@ -1,0 +1,41 @@
+.divForm {
+  width: 50%;
+  min-width: 500px;
+  padding: 10px;
+  margin: auto;
+  padding: 10px;
+  background-color: #fff;
+  border: 2px solid black;
+  box-shadow: 4px 4px 0px black;
+  border-radius: 10px;
+}
+
+.botonHash{
+  margin-top: 10px;
+  width: calc(100%);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-size: 20px;
+  background-color: inherit;
+}
+
+.botonHash:hover {
+    background-color: #09f;
+    color: white;
+    border-color: #09f;
+    cursor: pointer;
+}
+
+.textArea {
+  width: calc(100% - 14px);
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  height: 20vh;
+  font-size: 15px;
+}

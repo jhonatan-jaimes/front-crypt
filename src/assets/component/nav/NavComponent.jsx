@@ -31,22 +31,28 @@ const NavComponent = ({ tipo }) => {
           onClick={() => changeMode("home")}
         />
         <LinkComponent
-          to="/qr"
-          name="Codigo QR"
-          className={handleMode("qr")}
-          onClick={() => changeMode("qr")}
-        />
-        <LinkComponent
           to="/ed"
           name="Encriptar texto"
           className={handleMode("ed")}
           onClick={() => changeMode("ed")}
         />
         <LinkComponent
+          to="/qr"
+          name="Crear QR"
+          className={handleMode("qr")}
+          onClick={() => changeMode("qr")}
+        />
+        <LinkComponent
           to="/shorter"
           name="Acortar link"
           className={handleMode("shorter")}
           onClick={() => changeMode("shorter")}
+        />
+        <LinkComponent
+          to="/hash"
+          name="Crear hash"
+          className={handleMode("hash")}
+          onClick={() => changeMode("hash")}
         />
       </div>
     </section>

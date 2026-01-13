@@ -16,7 +16,7 @@ const ShorteComponent = ({ value, placeholder, onChange, code, onClick }) => {
                 />
             </div>
             <BotonComponent
-                nameButton={"Acortar"}
+                nameButton={"Acortar link"}
                 className={styles.botonAcortar}
                 onClick={() => onClick("short", { text: value, link: "https://edsq-app.onrender.com/" })}
             />
