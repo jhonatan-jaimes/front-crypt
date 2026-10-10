@@ -1,20 +1,27 @@
 .pageDiv {
-    width: 100vw;
-    height: calc(100vh);
-    background-color: #09f;
-    color: white;
-    align-content: center;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
     text-align: center;
+    background-image: radial-gradient(
+        circle at 50% 30%,
+        rgba(124, 108, 255, 0.35),
+        transparent 60%
+    );
 }
 
 .pageImg {
-    margin: auto;
-    margin-bottom: 20px;
-    width: 100px;
-    height: 100px;
+    width: 96px;
+    height: 96px;
+    filter: drop-shadow(0 0 24px rgba(34, 211, 238, 0.6));
 }
 
 .pageParra {
-    margin: auto;
-    color: white;
+    color: var(--text);
+    font-size: 22px;
+    letter-spacing: 0.5px;
 }

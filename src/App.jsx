@@ -9,21 +9,36 @@ import ShortPage from "./assets/pages/short-page/ShortPage";
 import LoadPage from "./assets/pages/load-page/LoadPage";
 import HashPage from "./assets/pages/hash/HashPage";
 
+const THEME_KEY = "edsq-theme";
+
 function App() {
   //require('dotenv').config();
   const [tipo, setTipo] = useState("");
+  const [theme, setTheme] = useState(
+    () => localStorage.getItem(THEME_KEY) || "dark"
+  );
+
   useEffect(() => {
     const pathVari = window.location.pathname;
     const segments = pathVari.split("/").filter(Boolean);
     const last = segments.length ? segments[segments.length - 1] : "";
     setTipo(last);
   }, []);
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem(THEME_KEY, theme);
+  }, [theme]);
+
+  const toggleTheme = () =>
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+
   const hideNav = /^\/[a-zA-Z0-9]{8}$/.test(location.pathname);
   return (
     <section className="containApp">
       {!hideNav && (
         <div className="conNav">
-          <NavComponent tipo={tipo}/>
+          <NavComponent tipo={tipo} theme={theme} toggleTheme={toggleTheme} />
         </div>
       )}
       <Routes>

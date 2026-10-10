@@ -1,47 +1,86 @@
 .navContain {
-  max-width: 50%;
-  min-width: 500px;
-  padding: 10px;
-  margin: auto;
-  background-color: #09e;
+  width: 100%;
+  max-width: 1100px;
+  padding: 12px 20px;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
-  border: 2px solid black;
-  box-shadow: 4px 4px 0px black;
-  border-radius: 10px;
+  gap: 14px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .navLinkCont {
   display: flex;
-  min-width: 500px;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.linkNav,
+.linkNavSelect {
+  padding: 9px 16px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease,
+    filter 0.2s ease;
 }
 
 .linkNav {
-  padding: 10px;
-  margin: auto;
-  color: #000;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.linkNavSelect {
-  margin: auto;
-  padding: 10px;
-  color: #eee;
-  cursor: pointer;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-.linkNavSelect:hover {
-  color: #777;
+  color: var(--text-dim);
+  border: 1px solid transparent;
 }
 
 .linkNav:hover {
-  color: #777;
+  color: var(--text);
+  background: var(--hover-bg);
+}
+
+.linkNavSelect {
+  color: #fff;
+  background: var(--accent-grad);
+  box-shadow: 0 8px 20px -8px rgba(124, 108, 255, 0.9);
+}
+
+.linkNavSelect:hover {
+  color: #fff;
+  filter: brightness(1.08);
 }
 
 .tituloNav {
-  padding-left: 10px;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding-left: 6px;
+  background: var(--accent-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.themeToggle {
+  padding: 9px 16px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-dim);
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.themeToggle:hover {
+  color: var(--text);
+  background: var(--hover-bg);
+  border-color: var(--border-strong);
 }

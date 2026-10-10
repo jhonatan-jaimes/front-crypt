@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import LinkComponent from "./LinkComponent";
 import styles from "./Nav.module.css";
 
-const NavComponent = ({ tipo }) => {
+const NavComponent = ({ tipo, theme, toggleTheme }) => {
 
   const [mode, setMode] = useState("home");
 
@@ -55,6 +55,17 @@ const NavComponent = ({ tipo }) => {
           onClick={() => changeMode("hash")}
         />
       </div>
+      <button
+        type="button"
+        className={styles.themeToggle}
+        onClick={toggleTheme}
+        aria-label={
+          theme === "dark" ? "Cambiar a modo claro" : "Cambiar a modo oscuro"
+        }
+        title={theme === "dark" ? "Modo claro" : "Modo oscuro"}
+      >
+        {theme === "dark" ? "Modo claro" : "Modo oscuro"}
+      </button>
     </section>
   );
 };

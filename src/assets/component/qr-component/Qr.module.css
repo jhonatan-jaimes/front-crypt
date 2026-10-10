@@ -1,52 +1,89 @@
 .imgDiv {
-    width: 500px;
-    min-width: 500px;
-    border-radius: 10px;
-    padding: 10px;
-    border: 2px solid black;
-    box-shadow: 4px 4px 0px rgb(0, 0, 0);
-    background-color: #fff;
+    width: 100%;
+    max-width: 600px;
+    border-radius: var(--radius);
+    padding: 28px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    background: var(--card);
     text-align: center;
     margin: auto;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 }
 
-.white{
-    width: 500px;
-    height: 500px;
+.imgDiv img {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    height: auto;
+    border-radius: 12px;
+    margin-top: 16px;
+    padding: 8px;
+    background: #fff;
+}
+
+.white {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    margin: 16px auto 0;
+    border-radius: 12px;
+    border: 1px dashed var(--border-strong);
+    background: var(--input-bg);
 }
 
 .inputText {
-    margin-top: 10px;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 20px;
-    width: calc(100% - 14px);
-    border: none;
-    border-bottom: 2px solid black;
+    margin-top: 4px;
+    padding: 13px 14px;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 100%;
+    background: var(--input-bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inputText::placeholder {
+    color: var(--placeholder);
+}
+
+.inputText:focus {
+    border-color: var(--accent);
+    box-shadow: var(--focus);
 }
 
 .boxBoton {
     width: 100%;
     display: flex;
-    margin-top: 10px;
+    gap: 10px;
+    margin-top: 18px;
     justify-content: space-between;
 }
 
 .botonQr {
-    width: calc(50% - 5px);
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 5px;
-    border: 2px solid black;
-    font-size: 20px;
-    background-color: inherit;
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dim);
+    cursor: pointer;
+    background: var(--input-bg);
+    transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .botonQr:hover {
-    background-color: #09f;
-    color: white;
-    border-color: #09f;
-    cursor: pointer;
+    background: var(--accent-grad);
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 10px 24px -10px rgba(124, 108, 255, 0.9);
 }
 
 .imgQr {

@@ -1,12 +1,14 @@
 .containApp {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  background-color: rgb(80, 160, 240, 25%);
 }
 
-.conNav{
-  min-height: 10vh;
+.conNav {
   width: 100%;
-  align-content: end;
+  padding: 18px 16px 0;
+  display: flex;
+  justify-content: center;
 }
