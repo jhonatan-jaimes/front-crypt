@@ -12,7 +12,7 @@
 }
 
 .botonHash {
-  margin-top: 4px;
+  margin-top: 16px;
   width: 100%;
   padding: 13px;
   border-radius: 10px;
@@ -32,6 +32,27 @@
 
 .botonHash:active {
   transform: translateY(1px);
+}
+
+.inputHash {
+  width: 100%;
+  margin-top: 4px;
+  padding: 13px 14px;
+  border-radius: 10px;
+  font-size: 16px;
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inputHash::placeholder {
+  color: var(--placeholder);
+}
+
+.inputHash:focus {
+  border-color: var(--accent);
+  box-shadow: var(--focus);
 }
 
 .textArea {

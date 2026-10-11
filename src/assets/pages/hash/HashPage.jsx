@@ -7,6 +7,7 @@ import styles from "./Hash.module.css"
 const HashPage = () => {
 
   const [code, setCode] = useState({ hash: "" })
+  const [value, setValue] = useState(32)
 
   const onClick = async (mode, objeto) => {
     try {
@@ -18,9 +19,13 @@ const HashPage = () => {
     }
   }
 
+  const onChange = (e) => {
+    setValue(e.target.value);
+  }
+
   return(
     <section className={styles.divGeneral}>
-      <FormHashComponent onClick={onClick} code={code} value={32}/>
+      <FormHashComponent onClick={onClick} code={code} value={value} onChange={onChange}/>
     </section>
   )
 }

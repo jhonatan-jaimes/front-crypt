@@ -1,9 +1,12 @@
 import React from "react";
 
-const InputTextComponent = ({ value, placeholder, className, onChange }) => {
+const InputTextComponent = ({ value, placeholder, className, onChange, type = "text", min, max }) => {
   return (
     <input
       name="text"
+      type={type}
+      min={min}
+      max={max}
       value={value}
       placeholder={placeholder}
       className={className}
