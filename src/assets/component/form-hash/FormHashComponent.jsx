@@ -8,7 +8,7 @@ export const FormHashComponent = ({ value, code, onClick  }) => {
       <BotonComponent
         nameButton={"Crear hash"}
         className={styles.botonHash}
-        onClick={() => onClick("get-hash", { lenght: value })}
+        onClick={() => onClick("get-hash", { value: value })}
       />
       <TextAreaComponent  
         value={code.hash}
